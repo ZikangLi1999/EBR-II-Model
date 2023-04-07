@@ -1,0 +1,25 @@
+This file is used to log information.
+
+2023-3-12
+checkNaN. 
+
+Problems
+- All quantities of some nuclides in MAT1282 (Average fuel slug) are NaN.
+- At the point of nuclides
+    - The incorrect nuclides includes: 
+        - Cm242,
+        - Cm246,
+        - light nuclides whose mass number <= 100
+    - All of the light nuclides appear in MAT1282.
+    - Beside of MAT1282, the incorrect nuclides only includes:
+        - Cm242, 
+        - Cm246, 
+        - Ni64
+- At the point of quantities
+    - The beta_total of Cm242 dominates
+    - Most quantities of Cm246 are NaN, except Chi and velocity
+
+Solutions
+- Since the MAT1282 is "Average fuel slug", which is NOT used in the whole calculation
+    - Reason: The supercell section of HWCR poison is the upper extension instead of the fuel slug
+
